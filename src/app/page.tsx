@@ -21,7 +21,6 @@ import {
   Briefcase,
   Building2,
   Calendar,
-  MapPin,
   ChevronRight,
   Car,
   Battery,
@@ -31,7 +30,8 @@ import {
   Star,
   Gauge,
   CircuitBoard,
-  Plug
+  Plug,
+  Thermometer
 } from 'lucide-react';
 
 // Stats data
@@ -56,30 +56,31 @@ const experiences = [
     company: 'AR Akhtar Ali Workshop',
     companyUrl: '#',
     period: 'October 2023 - Present',
-    location: 'Lahore, Pakistan',
     type: 'Full-time',
-    description: 'Specializing in Hybrid & Electric Cars. Advanced diagnostics and repair on HEV and fully electric vehicles.',
+    description: 'Hybrid and EV diagnostics and repair, plus gearbox fault diagnosis and AC system work.',
     achievements: [
       'Advanced HEV & EV diagnostics and repair',
+      'Gearbox fault diagnosis and repair assessment',
+      'Car AC diagnostics and repair',
       'EV battery systems & electric motors',
       'CAN-BUS communication repair',
       'EV accessories installation',
     ],
-    skills: ['HEV/EV Repair', 'Battery Systems', 'CAN-BUS', 'Scanner Diagnostics'],
+    skills: ['HEV/EV Repair', 'Gearbox Diagnostics', 'AC Repair', 'Scanner Diagnostics'],
   },
   {
     title: 'Auto Electrician',
     company: 'Allah Hoo Autos',
     companyUrl: '#',
     period: 'March 2022 - September 2023',
-    location: 'Lahore, Pakistan',
     type: 'Full-time',
-    description: 'Hybrid Vehicles Specialist working on German and Japanese vehicles.',
+    description: 'Hybrid vehicle diagnostics, battery reconditioning, and car AC system repair.',
     achievements: [
       'Hybrid system diagnostics',
       'Battery pack reconditioning',
       'Inverter & ECU repairs',
       'Advanced scanner diagnostics',
+      'Car AC diagnostics and repair',
     ],
     skills: ['Hybrid Systems', 'Techstream', 'Honda HDS', 'Autel'],
   },
@@ -96,6 +97,16 @@ const skillCategories = [
     title: 'EV/Hybrid Systems',
     icon: Battery,
     skills: ['EV Battery Inspection', 'DC-DC Converter', 'Electric Motor Repair', 'Inverter Wiring'],
+  },
+  {
+    title: 'Gearbox Systems',
+    icon: Wrench,
+    skills: ['Gearbox Fault Diagnosis', 'Shift & Selector Checks', 'Transmission Wiring', 'Repair Assessment'],
+  },
+  {
+    title: 'Car AC Systems',
+    icon: Thermometer,
+    skills: ['AC Fault Diagnosis', 'Leak Testing', 'Compressor Checks', 'AC Repair'],
   },
   {
     title: 'Electrical Testing',
@@ -129,6 +140,18 @@ const featuredProjects = [
     tags: ['Wiring', 'ECU', 'Programming'],
     color: 'from-purple-500 to-pink-500',
   },
+  {
+    title: 'Gearbox Diagnostics & Repair',
+    description: 'Gear shifting and transmission faults assessed with fault codes, live data, and wiring checks before repair.',
+    tags: ['Gearbox', 'Transmission', 'Diagnostics'],
+    color: 'from-slate-500 to-blue-500',
+  },
+  {
+    title: 'Car AC Diagnostics & Repair',
+    description: 'AC fault finding, leak testing, compressor checks, and cooling system repair.',
+    tags: ['AC Diagnostics', 'Leak Testing', 'Cooling'],
+    color: 'from-cyan-500 to-blue-500',
+  },
 ];
 
 // Services
@@ -137,6 +160,11 @@ const services = [
     icon: Wrench,
     title: 'Gearbox Diagnostics & Repair',
     description: 'Gear and transmission fault finding, control-system checks, and repair after inspection.',
+  },
+  {
+    icon: Thermometer,
+    title: 'Car AC Diagnostics & Repair',
+    description: 'AC fault diagnosis, leak testing, compressor checks, and repair for reliable cooling.',
   },
   {
     icon: Battery,
@@ -234,6 +262,8 @@ export default function Home() {
                     2000,
                     'Gearbox Specialist',
                     2000,
+                    'AC Diagnostics & Repair',
+                    2000,
                     'HEV Specialist ⚡',
                     2000,
                     'EV Repair Expert',
@@ -256,7 +286,7 @@ export default function Home() {
                 transition={{ delay: 0.6 }}
                 className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-8"
               >
-                Automotive electrical and gearbox diagnostics and repair for{' '}
+                Electrical, gearbox, and AC diagnostics and repair for{' '}
                 <span className="text-primary-600 dark:text-primary-400 font-semibold">traditional petrol cars</span>,{' '}
                 <span className="text-primary-600 dark:text-primary-400 font-semibold">hybrid vehicles</span>, and{' '}
                 <span className="text-primary-600 dark:text-primary-400 font-semibold">fully electric cars</span>.
@@ -404,7 +434,7 @@ export default function Home() {
                 I&apos;m an <strong className="text-primary-600 dark:text-primary-400">automotive electrical and gearbox specialist</strong> with 12+ years of hands-on experience.
               </p>
               <p className="text-dark-600 dark:text-dark-300 text-lg leading-relaxed mb-6">
-                I specialize in <strong className="text-primary-600 dark:text-primary-400">electrical diagnostics</strong>, <strong className="text-primary-600 dark:text-primary-400">gearbox diagnostics and repair</strong>, and <strong className="text-primary-600 dark:text-primary-400">system troubleshooting</strong> for traditional petrol cars, hybrid vehicles, and fully electric cars.
+                I specialize in <strong className="text-primary-600 dark:text-primary-400">electrical diagnostics</strong>, <strong className="text-primary-600 dark:text-primary-400">gearbox diagnostics and repair</strong>, and <strong className="text-primary-600 dark:text-primary-400">car AC diagnostics and repair</strong> for traditional, hybrid, and electric vehicles.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/about" className="btn-primary">
@@ -421,11 +451,12 @@ export default function Home() {
               className="space-y-4"
             >
               {[
-                { icon: Car, title: 'Traditional Cars', desc: 'Complete electrical systems & AC repair' },
+                { icon: Car, title: 'Traditional Cars', desc: 'Complete electrical system service' },
                 { icon: Zap, title: 'Hybrid Vehicles', desc: 'HEV diagnostics & battery reconditioning' },
                 { icon: Battery, title: 'Electric Vehicles', desc: 'EV battery systems & motor repair' },
                 { icon: Gauge, title: 'Advanced Diagnostics', desc: 'Scanner-based fault finding & repair' },
-                { icon: Wrench, title: 'Gearbox Work', desc: 'Gear and transmission diagnostics & repair' },
+                { icon: Wrench, title: 'Gearbox Diagnostics & Repair', desc: 'Gear and transmission fault finding & repair' },
+                { icon: Thermometer, title: 'Car AC Diagnostics & Repair', desc: 'Leak testing, compressor checks & cooling repair' },
               ].map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -505,10 +536,6 @@ export default function Home() {
                         <Calendar className="w-4 h-4" />
                         {exp.period}
                       </span>
-                      <span className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {exp.location}
-                      </span>
                     </div>
 
                     <p className="text-dark-600 dark:text-dark-300 mb-4">{exp.description}</p>
@@ -569,7 +596,7 @@ export default function Home() {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => (
               <motion.div
                 key={category.title}
@@ -628,7 +655,7 @@ export default function Home() {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProjects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -766,10 +793,10 @@ export default function Home() {
               Get In Touch
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-white mb-4">
-              Need Auto Electrical Service? <span className="gradient-text">Contact Me!</span>
+              Need Vehicle Diagnostics or Repair? <span className="gradient-text">Contact Me!</span>
             </h2>
             <p className="text-dark-500 dark:text-dark-400 text-lg max-w-2xl mx-auto mb-8">
-              Whether you need hybrid vehicle diagnostics, EV battery service, or general auto electrical repair, I&apos;m here to help.
+              Contact me for hybrid or EV service, gearbox diagnostics and repair, car AC diagnostics and repair, or auto electrical work.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="tel:+923188283154" className="btn-primary">
@@ -789,12 +816,6 @@ export default function Home() {
                 <Mail className="w-5 h-5" />
                 Email Me
               </a>
-            </div>
-            <div className="mt-8 text-dark-500 dark:text-dark-400">
-              <p className="flex items-center justify-center gap-2">
-                <MapPin className="w-4 h-4" />
-                A.R Akhtar Ali Autos Near Netsol Technologies, Lahore, Pakistan
-              </p>
             </div>
           </motion.div>
         </div>

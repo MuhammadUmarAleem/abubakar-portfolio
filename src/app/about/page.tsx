@@ -14,11 +14,11 @@ import {
   CheckCircle2,
   Sparkles,
   Users,
-  MapPin,
   Phone,
   Mail,
   Gauge,
-  CircuitBoard
+  CircuitBoard,
+  Thermometer
 } from 'lucide-react';
 
 const journey = [
@@ -45,6 +45,18 @@ const journey = [
     title: 'Diagnostic Expert',
     description: 'Uses professional diagnostic tools including Techstream, Honda HDS, Autel, Xentry, Audi ODIS, and Tesla Toolbox 3.',
     color: 'from-orange-500 to-red-500',
+  },
+  {
+    icon: Wrench,
+    title: 'Gearbox Diagnostics & Repair',
+    description: 'Diagnoses gear shifting, selector, wiring, and transmission control faults and assesses repairs.',
+    color: 'from-slate-500 to-blue-500',
+  },
+  {
+    icon: Thermometer,
+    title: 'Car AC Diagnostics & Repair',
+    description: 'Checks AC performance, leaks, compressors, and cooling faults before repair.',
+    color: 'from-cyan-500 to-blue-500',
   },
 ];
 
@@ -155,18 +167,17 @@ export default function AboutPage() {
               <div className="space-y-4 text-dark-600 dark:text-dark-300 text-lg">
                 <p>
                   I&apos;m <span className="font-semibold text-dark-900 dark:text-white">Muhammad Abubakar</span>, 
-                  an automotive specialist with 12+ years of hands-on experience. My work covers electrical, hybrid, EV, and gearbox systems.
+                  an automotive specialist with 12+ years of hands-on experience. My work covers electrical, hybrid, EV, gearbox, and car AC systems.
                 </p>
                 <p>
                   A dedicated and hardworking professional skilled in{' '}
                   <span className="text-primary-600 dark:text-primary-400 font-medium">electrical diagnostics</span>,{' '}
                   <span className="text-primary-600 dark:text-primary-400 font-medium">wiring repair</span>, and{' '}
-                  <span className="text-primary-600 dark:text-primary-400 font-medium">gearbox diagnostics and repair</span>{' '}
+                  <span className="text-primary-600 dark:text-primary-400 font-medium">gearbox and car AC diagnostics and repair</span>{' '}
                   across traditional petrol cars, hybrid vehicles, and fully electric cars.
                 </p>
                 <p>
-                  Currently working at <span className="font-semibold">AR Akhtar Ali Workshop</span> in Lahore, I specialize in 
-                  advanced diagnostics and repair on HEV and fully electric vehicles, plus gearbox fault finding and repair.
+                  At <span className="font-semibold">AR Akhtar Ali Workshop</span>, I work on hybrid and electric vehicles, gearbox faults, and car AC diagnosis and repair.
                 </p>
               </div>
               
@@ -194,14 +205,14 @@ export default function AboutPage() {
             className="text-center mb-16"
           >
             <h2 className="section-title">
-              My <span className="gradient-text">Journey</span>
+              Areas of <span className="gradient-text">Expertise</span>
             </h2>
             <p className="section-subtitle">
-              From traditional cars to cutting-edge electric vehicles
+              Electrical, hybrid, EV, gearbox, and car AC service
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {journey.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -211,9 +222,6 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="relative"
               >
-                {index < journey.length - 1 && (
-                  <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-dark-200 dark:from-dark-700 to-transparent z-0" />
-                )}
                 <div className="glass-card p-6 relative z-10 h-full">
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center mb-4`}>
                     <item.icon className="w-7 h-7 text-white" />
@@ -252,7 +260,8 @@ export default function AboutPage() {
                   {[
                     { icon: '⚡', title: 'Advanced Diagnostics', desc: 'Using professional scanners for accurate fault finding' },
                     { icon: '🔋', title: 'Battery Expertise', desc: 'Hybrid and EV battery inspection, reconditioning, and repair' },
-                    { icon: '🔧', title: 'Electrical & Gearbox Work', desc: 'Wiring and ECU diagnosis, plus gearbox fault finding and repair' },
+                    { icon: '🔧', title: 'Gearbox Diagnostics & Repair', desc: 'Gear shifting, selector, wiring, and control-system fault finding' },
+                    { icon: '❄️', title: 'Car AC Diagnostics & Repair', desc: 'Leak testing, compressor checks, and cooling repair' },
                     { icon: '🚗', title: 'All Major Brands', desc: 'Toyota, Lexus, Mercedes, BMW, BYD, and more' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-center gap-4 p-4 rounded-xl glass">
@@ -286,7 +295,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-dark-900 dark:text-white">Muhammad Abubakar</p>
-                    <p className="text-dark-500 dark:text-dark-400 text-sm">Auto Electrician, Lahore</p>
+                    <p className="text-dark-500 dark:text-dark-400 text-sm">Electrical, Gearbox & AC Specialist</p>
                   </div>
                 </div>
               </div>
@@ -410,15 +419,9 @@ export default function AboutPage() {
             className="glass-card p-8 md:p-12 text-center"
           >
             <h3 className="text-2xl font-bold mb-8 text-dark-900 dark:text-white">
-              📍 Location & Contact
+              Contact Me
             </h3>
             <div className="flex flex-wrap justify-center gap-6">
-              <div className="flex items-center gap-2 text-dark-600 dark:text-dark-300">
-                <MapPin className="w-5 h-5 text-primary-500" />
-                <span>A.R Akhtar Ali Autos Near Netsol Technologies, Lahore, Pakistan</span>
-              </div>
-            </div>
-            <div className="flex flex-wrap justify-center gap-6 mt-4">
               <a href="tel:+923188283154" className="flex items-center gap-2 text-dark-600 dark:text-dark-300 hover:text-primary-500">
                 <Phone className="w-5 h-5 text-primary-500" />
                 <span>+92 318 8283154</span>
