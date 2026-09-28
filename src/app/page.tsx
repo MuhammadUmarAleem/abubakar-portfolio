@@ -19,7 +19,6 @@ import {
   Award,
   Users,
   Briefcase,
-  GraduationCap,
   Building2,
   Calendar,
   MapPin,
@@ -37,10 +36,10 @@ import {
 
 // Stats data
 const stats = [
-  { label: 'Years Experience', value: '4+', icon: Briefcase },
-  { label: 'Vehicles Serviced', value: '500+', icon: Car },
-  { label: 'Vehicle Brands', value: '15+', icon: Target },
-  { label: 'Specializations', value: '2', icon: Wrench },
+  { label: 'Years Experience', value: '12+', icon: Briefcase },
+  { label: 'Vehicles Serviced', value: '3k+', icon: Car },
+  { label: 'Vehicle Brands', value: '20+', icon: Target },
+  { label: 'Service Areas', value: '5+', icon: Wrench },
 ];
 
 // Social links
@@ -48,26 +47,6 @@ const socialLinks = [
   { name: 'Phone', href: 'tel:+923188283154', icon: Phone },
   { name: 'WhatsApp', href: 'https://wa.me/923188283154', icon: MessageCircle },
   { name: 'Email', href: 'mailto:abubakaraleem1122@gmail.com', icon: Mail },
-];
-
-// Education data
-const education = [
-  {
-    degree: 'Matriculation',
-    institution: 'Islamia Secondary High School',
-    location: 'Toba Tek Singh, Pakistan',
-    period: 'Completed',
-    description: 'Foundation education with focus on technical and practical skills.',
-    icon: GraduationCap,
-  },
-  {
-    degree: 'Intermediate',
-    institution: 'Sultan Foundation Degree College',
-    location: 'Toba Tek Singh, Pakistan',
-    period: 'Completed',
-    description: 'Foundation education with focus on technical and practical skills.',
-    icon: GraduationCap,
-  },
 ];
 
 // Experience data
@@ -126,7 +105,7 @@ const skillCategories = [
   {
     title: 'Specialized Tools',
     icon: Wrench,
-    skills: ['Techstream', 'Honda HDS', 'Autel', 'Launch Scanner'],
+    skills: ['Techstream', 'Honda HDS', 'Autel', 'Launch Scanner', 'Xentry', 'Audi ODIS', 'Tesla Toolbox 3'],
   },
 ];
 
@@ -154,6 +133,11 @@ const featuredProjects = [
 
 // Services
 const services = [
+  {
+    icon: Wrench,
+    title: 'Gearbox Diagnostics & Repair',
+    description: 'Gear and transmission fault finding, control-system checks, and repair after inspection.',
+  },
   {
     icon: Battery,
     title: 'EV Battery Service',
@@ -248,6 +232,8 @@ export default function Home() {
                   sequence={[
                     'Auto Electrician',
                     2000,
+                    'Gearbox Specialist',
+                    2000,
                     'HEV Specialist ⚡',
                     2000,
                     'EV Repair Expert',
@@ -270,7 +256,7 @@ export default function Home() {
                 transition={{ delay: 0.6 }}
                 className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-8"
               >
-                A dedicated and hardworking Auto Electrician with hands-on experience across{' '}
+                Automotive electrical and gearbox diagnostics and repair for{' '}
                 <span className="text-primary-600 dark:text-primary-400 font-semibold">traditional petrol cars</span>,{' '}
                 <span className="text-primary-600 dark:text-primary-400 font-semibold">hybrid vehicles</span>, and{' '}
                 <span className="text-primary-600 dark:text-primary-400 font-semibold">fully electric cars</span>.
@@ -328,7 +314,7 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full blur-3xl opacity-30 animate-pulse" />
                 <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-white dark:border-dark-800 shadow-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
-                  <span className="text-8xl font-bold text-white">M.A</span>
+                  <Image src="/images/profile.png" alt="Muhammad Abubakar" fill priority sizes="320px" className="object-cover object-top" />
                 </div>
                 {/* Wrench icon */}
                 <div className="absolute -top-4 -right-4 group cursor-pointer">
@@ -415,10 +401,10 @@ export default function Home() {
               className="glass-card p-8"
             >
               <p className="text-dark-600 dark:text-dark-300 text-lg leading-relaxed mb-6">
-                I&apos;m a <strong className="text-primary-600 dark:text-primary-400">Hybrid & Electric Vehicle Auto Electrician</strong> with over 7 years of hands-on experience in automotive electrical systems.
+                I&apos;m an <strong className="text-primary-600 dark:text-primary-400">automotive electrical and gearbox specialist</strong> with 12+ years of hands-on experience.
               </p>
               <p className="text-dark-600 dark:text-dark-300 text-lg leading-relaxed mb-6">
-                I specialize in <strong className="text-primary-600 dark:text-primary-400">electrical diagnostics</strong>, <strong className="text-primary-600 dark:text-primary-400">wiring repair</strong>, and <strong className="text-primary-600 dark:text-primary-400">system troubleshooting</strong> for traditional petrol cars, hybrid vehicles, and fully electric cars.
+                I specialize in <strong className="text-primary-600 dark:text-primary-400">electrical diagnostics</strong>, <strong className="text-primary-600 dark:text-primary-400">gearbox diagnostics and repair</strong>, and <strong className="text-primary-600 dark:text-primary-400">system troubleshooting</strong> for traditional petrol cars, hybrid vehicles, and fully electric cars.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/about" className="btn-primary">
@@ -439,6 +425,7 @@ export default function Home() {
                 { icon: Zap, title: 'Hybrid Vehicles', desc: 'HEV diagnostics & battery reconditioning' },
                 { icon: Battery, title: 'Electric Vehicles', desc: 'EV battery systems & motor repair' },
                 { icon: Gauge, title: 'Advanced Diagnostics', desc: 'Scanner-based fault finding & repair' },
+                { icon: Wrench, title: 'Gearbox Work', desc: 'Gear and transmission diagnostics & repair' },
               ].map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -462,56 +449,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Education Section */}
-      <section id="education" className="py-20 relative bg-dark-50/50 dark:bg-dark-900/50">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.3 }}
-            className="text-center mb-12"
-          >
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-primary-600 dark:text-primary-400 mb-4">
-              <GraduationCap className="w-4 h-4" />
-              Education
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-white mb-4">
-              Academic <span className="gradient-text">Background</span>
-            </h2>
-          </motion.div>
-
-          <div className="max-w-3xl mx-auto space-y-6">
-            {education.map((edu, index) => (
-              <motion.div
-                key={edu.degree}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.3 }}
-                transition={{ delay: index * 0.1 }}
-                className="glass-card p-6 hover:border-primary-500/50 transition-colors"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center flex-shrink-0">
-                    <GraduationCap className="w-7 h-7 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-dark-900 dark:text-white mb-1">{edu.degree}</h3>
-                    <p className="text-primary-600 dark:text-primary-400 font-medium mb-2">{edu.institution}</p>
-                    <div className="flex flex-wrap gap-4 text-sm text-dark-500 dark:text-dark-400 mb-3">
-                      <span className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {edu.location}
-                      </span>
-                    </div>
-                    <p className="text-dark-600 dark:text-dark-300">{edu.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Experience Section */}
       <section id="experience" className="py-20 relative">
         <div className="container mx-auto px-4 md:px-6">
@@ -528,6 +465,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-white mb-4">
               Work <span className="gradient-text">History</span>
             </h2>
+            <p className="text-dark-500 dark:text-dark-400">Selected recent roles from 12+ years of hands-on work.</p>
           </motion.div>
 
           <div className="max-w-4xl mx-auto space-y-8">
@@ -749,7 +687,7 @@ export default function Home() {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}

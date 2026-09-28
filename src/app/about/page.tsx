@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
-  GraduationCap,
   Car,
   Wrench,
   Battery,
@@ -43,7 +43,7 @@ const journey = [
   {
     icon: Gauge,
     title: 'Diagnostic Expert',
-    description: 'Mastered professional scanners like Techstream, Honda HDS, Autel, and Launch.',
+    description: 'Uses professional diagnostic tools including Techstream, Honda HDS, Autel, Xentry, Audi ODIS, and Tesla Toolbox 3.',
     color: 'from-orange-500 to-red-500',
   },
 ];
@@ -57,7 +57,7 @@ const values = [
   {
     icon: Zap,
     title: 'Expertise',
-    description: '4+ years of hands-on experience across all vehicle types.',
+    description: '12+ years of hands-on experience across all vehicle types.',
   },
   {
     icon: Wrench,
@@ -72,9 +72,9 @@ const values = [
 ];
 
 const funFacts = [
-  { label: 'Years Experience', value: '4+', icon: Wrench },
-  { label: 'Vehicles Serviced', value: '500+', icon: Car },
-  { label: 'Vehicle Brands', value: '15+', icon: CheckCircle2 },
+  { label: 'Years Experience', value: '12+', icon: Wrench },
+  { label: 'Vehicles Serviced', value: '3k+', icon: Car },
+  { label: 'Vehicle Brands', value: '20+', icon: CheckCircle2 },
   { label: 'Happy Customers', value: '100+', icon: Heart },
 ];
 
@@ -105,8 +105,15 @@ export default function AboutPage() {
               <div className="relative w-full max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 rounded-3xl blur-2xl opacity-30" />
                 <div className="relative glass-card p-4 rounded-3xl">
-                  <div className="w-full aspect-square rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
-                    <span className="text-9xl font-bold text-white">M.A</span>
+                  <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
+                    <Image
+                      src="/images/profile.png"
+                      alt="Muhammad Abubakar, automotive diagnostics specialist"
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 100vw, 448px"
+                      className="object-cover object-top"
+                    />
                   </div>
                 </div>
                 
@@ -121,7 +128,7 @@ export default function AboutPage() {
                       <Wrench className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="font-bold text-dark-900 dark:text-white">Auto Electrician</p>
+                      <p className="font-bold text-dark-900 dark:text-white">Electrical & Gearbox Specialist</p>
                       <p className="text-sm text-dark-500 dark:text-dark-400">HEV & EV Specialist</p>
                     </div>
                   </div>
@@ -148,18 +155,18 @@ export default function AboutPage() {
               <div className="space-y-4 text-dark-600 dark:text-dark-300 text-lg">
                 <p>
                   I&apos;m <span className="font-semibold text-dark-900 dark:text-white">Muhammad Abubakar</span>, 
-                  a Hybrid & Electric Vehicle Auto Electrician with 4+ years of hands-on experience.
+                  an automotive specialist with 12+ years of hands-on experience. My work covers electrical, hybrid, EV, and gearbox systems.
                 </p>
                 <p>
                   A dedicated and hardworking professional skilled in{' '}
                   <span className="text-primary-600 dark:text-primary-400 font-medium">electrical diagnostics</span>,{' '}
                   <span className="text-primary-600 dark:text-primary-400 font-medium">wiring repair</span>, and{' '}
-                  <span className="text-primary-600 dark:text-primary-400 font-medium">system troubleshooting</span>{' '}
+                  <span className="text-primary-600 dark:text-primary-400 font-medium">gearbox diagnostics and repair</span>{' '}
                   across traditional petrol cars, hybrid vehicles, and fully electric cars.
                 </p>
                 <p>
                   Currently working at <span className="font-semibold">AR Akhtar Ali Workshop</span> in Lahore, I specialize in 
-                  advanced diagnostics and repair on HEV and fully electric vehicles from all major brands.
+                  advanced diagnostics and repair on HEV and fully electric vehicles, plus gearbox fault finding and repair.
                 </p>
               </div>
               
@@ -245,7 +252,7 @@ export default function AboutPage() {
                   {[
                     { icon: '⚡', title: 'Advanced Diagnostics', desc: 'Using professional scanners for accurate fault finding' },
                     { icon: '🔋', title: 'Battery Expertise', desc: 'Hybrid and EV battery inspection, reconditioning, and repair' },
-                    { icon: '🔧', title: 'Complete Electrical Service', desc: 'From wiring repair to ECU diagnostics' },
+                    { icon: '🔧', title: 'Electrical & Gearbox Work', desc: 'Wiring and ECU diagnosis, plus gearbox fault finding and repair' },
                     { icon: '🚗', title: 'All Major Brands', desc: 'Toyota, Lexus, Mercedes, BMW, BYD, and more' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-center gap-4 p-4 rounded-xl glass">

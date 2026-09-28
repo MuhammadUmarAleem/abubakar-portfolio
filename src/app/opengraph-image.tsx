@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Muhamamd Abubakar - Auto Electrician Portfolio';
+export const alt = 'Muhammad Abubakar - Automotive Diagnostics Portfolio';
 export const size = {
   width: 1200,
   height: 630,
@@ -76,7 +76,7 @@ export default async function Image() {
             marginBottom: 16,
           }}
         >
-          Muhamamd Abubakar
+          Muhammad Abubakar
         </div>
 
         {/* Title */}
@@ -87,12 +87,12 @@ export default async function Image() {
             marginBottom: 24,
           }}
         >
-          Hybrid & Electric Vehicle Auto Electrician
+          Auto Electrical & Gearbox Specialist
         </div>
 
         {/* Tags */}
         <div style={{ display: 'flex', gap: 12 }}>
-          {['HEV/EV Specialist', 'Battery Systems', 'CAN-BUS Expert', '7+ Years Experience'].map((tag) => (
+          {['HEV/EV Specialist', 'Battery Systems', 'Gearbox Work', '12+ Years Experience'].map((tag) => (
             <div
               key={tag}
               style={{

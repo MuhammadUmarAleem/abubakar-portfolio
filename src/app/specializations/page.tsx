@@ -123,15 +123,23 @@ const projects = [
     color: 'from-emerald-500 to-green-500',
     category: 'Electric Vehicles',
   },
+  {
+    title: 'Gearbox Diagnostics & Repair',
+    description: 'Gear shifting and transmission faults assessed with code reading, live data, wiring checks, and repair planning.',
+    tags: ['Gearbox Diagnostics', 'Transmission Controls', 'Wiring Checks'],
+    highlights: ['Gearbox fault code reading', 'Shift and selector checks', 'Transmission wiring diagnosis', 'Repair assessment'],
+    color: 'from-slate-500 to-blue-500',
+    category: 'Gearbox Systems',
+  },
 ];
 
-const categories = ['All', 'Hybrid Vehicles', 'Electric Vehicles', 'Electrical Systems', 'EV Components', 'Safety Systems', 'Climate Systems', 'Accessories'];
+const categories = ['All', 'Hybrid Vehicles', 'Electric Vehicles', 'Electrical Systems', 'EV Components', 'Safety Systems', 'Climate Systems', 'Gearbox Systems', 'Accessories'];
 
 const stats = [
-  { label: 'Years Experience', value: '4+', icon: Folder },
-  { label: 'Vehicles Serviced', value: '500+', icon: Car },
-  { label: 'Vehicle Brands', value: '15+', icon: Star },
-  { label: 'Specializations', value: '2', icon: Wrench },
+  { label: 'Years Experience', value: '12+', icon: Folder },
+  { label: 'Vehicles Serviced', value: '3k+', icon: Car },
+  { label: 'Vehicle Brands', value: '20+', icon: Star },
+  { label: 'Service Areas', value: '5+', icon: Wrench },
 ];
 
 export default function ProjectsPage() {
@@ -275,6 +283,7 @@ export default function ProjectsPage() {
                   {project.category === 'Safety Systems' && <Car className="w-6 h-6 text-white" />}
                   {project.category === 'Climate Systems' && <Wrench className="w-6 h-6 text-white" />}
                   {project.category === 'Accessories' && <Star className="w-6 h-6 text-white" />}
+                  {project.category === 'Gearbox Systems' && <Wrench className="w-6 h-6 text-white" />}
                 </div>
                 <span className="text-xs font-medium text-primary-600 dark:text-primary-400">{project.category}</span>
                 <h3 className="text-lg font-bold text-dark-900 dark:text-white mb-2">{project.title}</h3>

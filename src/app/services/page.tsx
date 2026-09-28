@@ -49,7 +49,7 @@ const services = [
   {
     icon: Gauge,
     title: 'Scanner Diagnostics',
-    description: 'Professional scanner-based diagnostics using Techstream, Honda HDS, Autel, and Launch equipment.',
+    description: 'Professional scanner-based diagnostics using Techstream, Honda HDS, Autel, Launch, Xentry, Audi ODIS, and Tesla Toolbox 3.',
     features: [
       'OBD-II Fault Reading',
       'Live Data Analysis',
@@ -71,6 +71,19 @@ const services = [
       'Signal Analysis',
     ],
     color: 'from-orange-500 to-red-500',
+  },
+  {
+    icon: Wrench,
+    title: 'Gearbox Diagnostics & Repair',
+    description: 'Gearbox and transmission fault diagnosis, including electronic control issues and repair based on inspection.',
+    features: [
+      'Gearbox Fault Code Reading',
+      'Shift & Selector Fault Diagnosis',
+      'Transmission Wiring Checks',
+      'Control System Testing',
+      'Gearbox Repair Assessment',
+    ],
+    color: 'from-slate-500 to-blue-500',
   },
   {
     icon: Car,
@@ -177,7 +190,7 @@ export default function ServicesPage() {
               My <span className="gradient-text">Services</span>
             </h1>
             <p className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-2xl mx-auto">
-              Comprehensive automotive electrical services for traditional cars, hybrid vehicles, and fully electric vehicles.
+              Automotive electrical, gearbox, hybrid, and EV diagnostics and repair for traditional cars and electric vehicles.
             </p>
           </motion.div>
         </div>
@@ -318,8 +331,8 @@ export default function ServicesPage() {
                 </h2>
                 <div className="space-y-4">
                   {[
-                    { icon: '⚡', text: '4+ Years of Experience' },
-                    { icon: '🔧', text: 'Expert in Traditional, Hybrid & EV Vehicles' },
+                    { icon: '⚡', text: '12+ Years of Experience' },
+                    { icon: '🔧', text: 'Electrical, Gearbox, Hybrid & EV Work' },
                     { icon: '🔋', text: 'Specialized in Battery Systems' },
                     { icon: '📊', text: 'Professional Scanner Diagnostics' },
                     { icon: '✅', text: 'Quality Workmanship Guaranteed' },
@@ -335,12 +348,37 @@ export default function ServicesPage() {
               
               <div className="text-center lg:text-right">
                 <div className="inline-block">
-                  <div className="text-6xl font-bold gradient-text mb-2">4+</div>
+                  <div className="text-6xl font-bold gradient-text mb-2">12+</div>
                   <div className="text-dark-500 dark:text-dark-400">Years of Experience</div>
                 </div>
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Regional Support */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="glass-card p-8 md:p-12 grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-white mb-4">
+                Regional & <span className="gradient-text">Remote Support</span>
+              </h2>
+              <p className="text-dark-600 dark:text-dark-300 mb-4">
+                Visit me in Lahore for hands-on diagnostics and repair. I also provide remote diagnostic assistance for drivers and workshops across Pakistan and other regions.
+              </p>
+              <p className="text-dark-500 dark:text-dark-400">
+                Share the vehicle model, symptoms, fault codes, and any scan results by WhatsApp. I can help review the information and advise on the next diagnostic steps. On-site work depends on your location and the vehicle issue.
+              </p>
+            </div>
+            <div className="flex flex-wrap md:justify-center gap-4">
+              <a href="https://wa.me/923188283154" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                Ask for Remote Assistance <ArrowRight className="w-5 h-5" />
+              </a>
+              <Link href="/contact" className="btn-secondary">Contact Details</Link>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -19,11 +19,11 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Muhammad Abubakar | Hybrid & Electric Vehicle Auto Electrician',
+    default: 'Muhammad Abubakar | Auto Electrician & Gearbox Specialist',
     template: '%s | Muhammad Abubakar',
   },
-  description: 'Professional Auto Electrician specializing in Hybrid & Electric Vehicles, EV Battery Systems, Diagnostic & Repair. Expert in Toyota, Lexus, Mercedes-Benz, BMW, BYD, and all major brands.',
-  keywords: ['Auto Electrician', 'Hybrid Vehicle Specialist', 'Electric Vehicle Repair', 'EV Battery System', 'HEV Diagnostics', 'Car Electrical Repair', 'Muhammad Abubakar', 'Lahore Pakistan', 'Toyota Hybrid', 'Mercedes EV', 'BMW Electric', 'CAN-BUS Repair'],
+  description: 'Muhammad Abubakar offers auto electrical, hybrid, EV, and gearbox diagnostics and repair in Lahore, with remote diagnostic assistance. 12+ years of experience.',
+  keywords: ['Auto Electrician', 'Hybrid Vehicle Specialist', 'Electric Vehicle Repair', 'Gearbox Diagnostics', 'EV Battery System', 'HEV Diagnostics', 'Car Electrical Repair', 'Muhammad Abubakar', 'Lahore Pakistan', 'Toyota Hybrid', 'Mercedes EV', 'BMW Electric', 'CAN-BUS Repair'],
   authors: [{ name: 'Muhammad Abubakar', url: 'https://mabubakar.com' }],
   creator: 'Muhammad Abubakar',
   publisher: 'Muhammad Abubakar',
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Muhammad Abubakar | Hybrid & Electric Vehicle Auto Electrician',
-    description: 'Expert Auto Electrician specializing in Hybrid and Electric Vehicles. Skilled in EV battery systems, diagnostics, and repair for all major vehicle brands.',
+    title: 'Muhammad Abubakar | Auto Electrician & Gearbox Specialist',
+    description: 'Auto electrical, hybrid, EV, and gearbox diagnostics and repair in Lahore. 12+ years of experience and remote diagnostic assistance.',
     url: 'https://mabubakar.com',
     siteName: 'Muhammad Abubakar - Auto Electrician Portfolio',
     images: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Muhammad Abubakar | Auto Electrician',
-    description: 'Expert Auto Electrician specializing in Hybrid & Electric Vehicles. Professional diagnostics and repair services.',
+    description: 'Auto electrical, hybrid, EV, and gearbox diagnostics and repair in Lahore. Remote diagnostic assistance available.',
     images: ['/og-image.png'],
     creator: '@mabubakar',
   },

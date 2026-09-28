@@ -27,6 +27,7 @@ const footerLinks = {
     { name: 'CAN-BUS Repair', href: '/services' },
     { name: 'Traditional Car Electrical', href: '/services' },
     { name: 'Scanner Diagnostics', href: '/services' },
+    { name: 'Gearbox Diagnostics & Repair', href: '/services' },
     { name: 'AC & Cooling Service', href: '/services' },
   ],
   brands: ['Toyota', 'Lexus', 'Mercedes-Benz', 'BMW', 'Audi', 'Porsche', 'BYD', 'Kia', 'Nissan', 'Ford', 'MG', 'Hyundai', 'Honda'],
@@ -48,10 +49,10 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
                 <Wrench className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold gradient-text">Muhamamd Abubakar</span>
+              <span className="text-xl font-bold gradient-text">Muhammad Abubakar</span>
             </Link>
             <p className="text-dark-500 dark:text-dark-400 text-sm mb-4">
-              Auto Electrician specializing in Hybrid & Electric Vehicles. Expert diagnostics and repair for modern automotive electrical systems.
+              Automotive electrical, hybrid, EV, and gearbox diagnostics and repair in Lahore, with remote diagnostic assistance.
             </p>
             <div className="flex gap-3">
               <motion.a

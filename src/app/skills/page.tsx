@@ -115,7 +115,8 @@ const coreCompetencies = [
   { icon: Zap, text: 'High-Voltage Safety Procedures' },
   { icon: Settings, text: 'ECU & Module Programming' },
   { icon: Car, text: 'Complete Auto Electrical Service' },
-  { icon: Shield, text: '4+ Years Professional Experience' },
+  { icon: Wrench, text: 'Gearbox Diagnostics & Repair' },
+  { icon: Shield, text: '12+ Years Professional Experience' },
 ];
 
 export default function SkillsPage() {
@@ -143,7 +144,7 @@ export default function SkillsPage() {
               My <span className="gradient-text">Skills</span>
             </h1>
             <p className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-2xl mx-auto">
-              Comprehensive expertise in automotive electrical systems, from traditional cars to cutting-edge electric vehicles.
+              Automotive electrical and gearbox expertise for traditional, hybrid, and electric vehicles.
             </p>
           </motion.div>
         </div>
@@ -315,11 +316,11 @@ export default function SkillsPage() {
               Hands-On Training & Experience
             </h2>
             <p className="text-dark-500 dark:text-dark-400 mb-6 max-w-2xl mx-auto">
-              4+ years of practical experience working on vehicles from all major brands. 
-              Trained on professional diagnostic equipment including Toyota Techstream, Honda HDS, Autel, and Launch scanners.
+              12+ years of practical experience working on vehicles from all major brands.
+              Experienced with professional diagnostic equipment including Toyota Techstream, Honda HDS, Autel, Launch, Xentry, Audi ODIS, and Tesla Toolbox 3.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              {['Toyota Techstream', 'Honda HDS', 'Autel Scanner', 'Launch Scanner', 'OBD-II Systems'].map((tool) => (
+              {['Toyota Techstream', 'Honda HDS', 'Autel Scanner', 'Launch Scanner', 'Mercedes-Benz Xentry', 'Audi ODIS', 'Tesla Toolbox 3', 'OBD-II Systems'].map((tool) => (
                 <span
                   key={tool}
                   className="px-4 py-2 rounded-full glass text-dark-600 dark:text-dark-300 font-medium"

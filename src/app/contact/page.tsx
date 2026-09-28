@@ -53,6 +53,8 @@ const services = [
   'EV Battery Service',
   'Traditional Car Electrical',
   'Scanner Diagnostics',
+  'Gearbox Diagnostics & Repair',
+  'Remote Diagnostic Assistance',
   'CAN-BUS Repair',
   'AC & Cooling Service',
   'Sound & Security Installation',
@@ -115,7 +117,7 @@ export default function ContactPage() {
               Contact <span className="gradient-text">Me</span>
             </h1>
             <p className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-2xl mx-auto">
-              Need automotive electrical service? Reach out to discuss your vehicle needs.
+              Need electrical or gearbox help? Visit me in Lahore or ask about remote diagnostic assistance.
             </p>
           </motion.div>
         </div>
@@ -371,8 +373,8 @@ export default function ContactPage() {
                 </h2>
                 <div className="space-y-4">
                   {[
-                    { icon: '⚡', text: '4+ Years of Experience' },
-                    { icon: '🔧', text: 'Expert in HEV & EV Vehicles' },
+                    { icon: '⚡', text: '12+ Years of Experience' },
+                    { icon: '🔧', text: 'Electrical, Gearbox, HEV & EV Work' },
                     { icon: '🔋', text: 'Battery System Specialist' },
                     { icon: '📊', text: 'Professional Diagnostics' },
                     { icon: '✅', text: 'Quality Guaranteed' },
@@ -383,6 +385,16 @@ export default function ContactPage() {
                     </div>
                   ))}
                 </div>
+              </div>
+
+              <div className="glass-card p-8">
+                <h2 className="text-2xl font-bold text-dark-900 dark:text-white mb-4">Regional & Remote Support</h2>
+                <p className="text-dark-600 dark:text-dark-300 mb-4">
+                  Hands-on diagnostics and repair are available in Lahore. I also offer remote diagnostic assistance to drivers and workshops across Pakistan and other regions.
+                </p>
+                <p className="text-dark-500 dark:text-dark-400 text-sm">
+                  Send your vehicle model, symptoms, fault codes, and scan results by WhatsApp to discuss the next steps.
+                </p>
               </div>
 
               <div className="glass-card p-8">

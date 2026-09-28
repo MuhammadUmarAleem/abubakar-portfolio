@@ -29,13 +29,14 @@ const experience = [
     type: 'Full-time',
     specialty: 'Hybrid & Electric Cars Specialist',
     current: true,
-    description: 'Performing advanced diagnostics and repair on hybrid (HEV) and fully electric vehicles (EV). Working on EV battery systems, electric motors, inverters, converters, and charging systems.',
+    description: 'Performing advanced diagnostics and repair on hybrid (HEV) and fully electric vehicles (EV), alongside gearbox fault diagnosis and repair assessment.',
     highlights: [
       'Performed advanced diagnostics and repair on hybrid (HEV) and fully electric vehicles (EV)',
       'Worked on EV battery systems, electric motors, inverters, converters, and charging systems',
       'Repaired CAN-BUS communication issues and programmed modules where required',
       'Installed EV accessories, DC-DC converters, dash cams, trackers, and upgraded systems',
       'Conducted preventive maintenance for EV cooling systems and wiring inspections',
+      'Diagnosed gear shifting, selector, wiring, and transmission control faults',
     ],
     technologies: ['HEV Repair', 'EV Diagnostics', 'Battery Systems', 'CAN-BUS', 'Scanner Diagnostics', 'High-Voltage Safety'],
   },
@@ -70,13 +71,14 @@ const specializations = [
   { name: 'Diagnostic Systems', icon: Gauge, expertise: 'Expert', description: 'OBD-II, Techstream, Honda HDS, Autel, Launch' },
   { name: 'Electrical Wiring', icon: CircuitBoard, expertise: 'Expert', description: 'CAN-BUS, short circuit, open circuit repair' },
   { name: 'High-Voltage Systems', icon: Wrench, expertise: 'Advanced', description: 'Safety procedures, inverters, converters' },
+  { name: 'Gearbox & Transmission', icon: Wrench, expertise: 'Experienced', description: 'Gearbox fault diagnosis, control systems, and repair assessment' },
 ];
 
 const achievements = [
-  { icon: Wrench, value: '4+', label: 'Years Experience' },
-  { icon: Car, value: '500+', label: 'Vehicles Serviced' },
-  { icon: Target, value: '15+', label: 'Vehicle Brands' },
-  { icon: Award, value: '2', label: 'Specializations' },
+  { icon: Wrench, value: '12+', label: 'Years Experience' },
+  { icon: Car, value: '3k+', label: 'Vehicles Serviced' },
+  { icon: Target, value: '20+', label: 'Vehicle Brands' },
+  { icon: Award, value: '5+', label: 'Service Areas' },
 ];
 
 const brands = ['Toyota', 'Lexus', 'Mercedes-Benz', 'BMW', 'Audi', 'Porsche', 'BYD', 'Kia', 'Nissan', 'Ford', 'MG', 'Hyundai', 'Honda'];
@@ -102,7 +104,7 @@ export default function ExperiencePage() {
               Work <span className="gradient-text">Experience</span>
             </h1>
             <p className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-2xl mx-auto">
-              From traditional cars to cutting-edge electric vehicles—4+ years of dedicated automotive electrical expertise.
+              12+ years of automotive experience across electrical, hybrid, EV, and gearbox work. Selected recent roles are shown below.
             </p>
           </motion.div>
         </div>
