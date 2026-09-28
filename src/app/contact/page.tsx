@@ -89,7 +89,7 @@ export default function ContactPage() {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >

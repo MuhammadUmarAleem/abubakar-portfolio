@@ -217,7 +217,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center lg:text-left"
@@ -247,14 +247,16 @@ export default function Home() {
               </motion.p>
 
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
                 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4"
               >
                 <span className="gradient-text">Muhammad</span>
                 <br />
+                {' '}
                 <span className="text-dark-900 dark:text-white">Abubakar</span>
+                {' '}
                 <span className="block mt-4 text-xl md:text-2xl font-semibold text-dark-600 dark:text-dark-300">
                   Automotive Diagnostics &amp; Repair Specialist
                 </span>
@@ -292,7 +294,7 @@ export default function Home() {
               </motion.div>
 
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
                 className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-8"
@@ -355,7 +357,7 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full blur-3xl opacity-30 animate-pulse" />
                 <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-white dark:border-dark-800 shadow-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
-                  <Image src="/images/profile.png" alt="Muhammad Abubakar" fill priority sizes="320px" className="object-cover object-top" />
+                  <Image src="/images/profile.png" alt="Muhammad Abubakar" fill sizes="320px" className="object-cover object-top" />
                 </div>
                 {/* Wrench icon */}
                 <div className="absolute -top-4 -right-4 group cursor-pointer">
@@ -449,7 +451,7 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/about" className="btn-primary">
-                  Read More <ChevronRight className="w-4 h-4" />
+                  About Muhammad Abubakar <ChevronRight className="w-4 h-4" />
                 </Link>
               </div>
             </motion.div>
@@ -742,7 +744,7 @@ export default function Home() {
                 <p className="text-dark-500 dark:text-dark-400 text-sm">{service.description}</p>
                 {serviceGuideLinks[service.title] && (
                   <Link href={serviceGuideLinks[service.title]} className="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:underline">
-                    Learn more <ArrowRight className="w-4 h-4" />
+                    Explore {service.title} <ArrowRight className="w-4 h-4" />
                   </Link>
                 )}
               </motion.div>

@@ -173,7 +173,7 @@ export default function Footer() {
             {footerLinks.brands.map((brand) => (
               <span
                 key={brand}
-                className="px-3 py-1 rounded-full text-xs bg-dark-100 dark:bg-dark-800 text-dark-500 dark:text-dark-400"
+                className="px-3 py-1 rounded-full text-xs bg-dark-100 dark:bg-dark-800 text-dark-700 dark:text-dark-300"
               >
                 {brand}
               </span>

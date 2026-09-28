@@ -86,7 +86,7 @@ export default function ServiceGuidePage({ params }: Props) {
         </header>
 
         <section aria-label="Quick answer" className="glass-card p-6 md:p-8 mb-14 border-l-4 border-primary-500">
-          <h2 className="text-xl font-bold text-dark-900 dark:text-white mb-3">What should you check first?</h2>
+          <h2 className="text-xl font-bold text-dark-900 dark:text-white mb-3">{guide.quickQuestion}</h2>
           <p className="text-dark-600 dark:text-dark-300 leading-relaxed">{guide.quickAnswer}</p>
         </section>
 

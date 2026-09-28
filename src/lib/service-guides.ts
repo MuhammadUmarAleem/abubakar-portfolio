@@ -3,6 +3,7 @@ export type ServiceGuide = {
   title: string;
   description: string;
   intro: string;
+  quickQuestion: string;
   quickAnswer: string;
   symptoms: string[];
   checks: { title: string; detail: string }[];
@@ -18,6 +19,7 @@ export const serviceGuides: Record<string, ServiceGuide> = {
     title: 'Hybrid Battery Diagnostics & Repair',
     description: 'Hybrid battery warning, reduced performance or charging concerns? Learn what is checked before repair or reconditioning is recommended.',
     intro: 'A hybrid warning does not identify one failed part by itself. The traction battery, its cooling system, the 12-volt battery, wiring and other hybrid components can produce related symptoms. The first step is to establish which system is actually reporting a fault.',
+    quickQuestion: 'Does a hybrid warning mean the battery needs replacing?',
     quickAnswer: 'A “Check Hybrid System” message does not automatically mean the battery pack needs replacing. Fault codes and measured system data help narrow the cause before repair options are discussed.',
     symptoms: [
       'A hybrid system or battery warning appears on the dashboard.',
@@ -53,6 +55,7 @@ export const serviceGuides: Record<string, ServiceGuide> = {
     title: 'Electric Vehicle Diagnostics',
     description: 'EV charging, battery, drive or cooling fault? Understand the diagnostic checks used to isolate the affected system before repair.',
     intro: 'An electric vehicle can show similar warnings for different problems. Charging equipment, the 12-volt system, the high-voltage battery, inverter, DC-DC converter, wiring and thermal controls each need a different diagnostic path. The goal is to identify the affected system before parts or repairs are proposed.',
+    quickQuestion: 'Why will my electric car not charge?',
     quickAnswer: 'An EV that will not charge is not automatically suffering a traction-battery failure. The charging connection, external equipment, 12-volt supply and vehicle-side charging system may all need to be considered.',
     symptoms: [
       'The vehicle will not charge or stops charging unexpectedly.',
@@ -88,6 +91,7 @@ export const serviceGuides: Record<string, ServiceGuide> = {
     title: 'Gearbox Diagnostics & Repair',
     description: 'Gear shifting, selector or transmission warning? Learn how gearbox faults are checked before an electrical or mechanical repair is proposed.',
     intro: 'A delayed, rough or missing gear change can have several causes. Electronic controls, selector inputs, wiring and mechanical parts may create similar symptoms. A diagnostic visit is designed to find the evidence behind the fault before deciding what work is appropriate.',
+    quickQuestion: 'Does a gearbox fault code mean it needs rebuilding?',
     quickAnswer: 'A gearbox fault code does not automatically mean the transmission needs rebuilding. It identifies a system to investigate; operating data and further checks are needed to understand the actual cause.',
     symptoms: [
       'A gear or transmission warning light is on.',
@@ -123,6 +127,7 @@ export const serviceGuides: Record<string, ServiceGuide> = {
     title: 'Car AC Diagnostics & Repair',
     description: 'Car AC blowing warm air, cooling poorly or losing performance? See how leaks, airflow, compressor and electrical faults are investigated.',
     intro: 'Weak cooling can come from more than low refrigerant. Airflow, fans, electrical controls, a compressor problem or a leak may all affect cabin temperature. The most useful repair begins with the conditions in which cooling fails and a check of the relevant systems.',
+    quickQuestion: 'Does warm air from the car AC mean it needs a refill?',
     quickAnswer: 'A car AC system that blows warm air does not always need a gas refill. A refill without investigating a leak or an electrical fault may leave the underlying problem unresolved.',
     symptoms: [
       'Air from the vents stays warm or takes too long to cool.',
