@@ -1,8 +1,10 @@
-# Muhammad abubakar - QA Engineer Portfolio
+# Muhammad Abubakar - Automotive Diagnostics Portfolio
 
 A stunning, professional portfolio website built with Next.js, Tailwind CSS, and Framer Motion.
 
-🌐 **Live Site:** [abubakar.vercel.app](https://abubakar.vercel.app)
+🌐 **Live Site:** [mabubakar.com](https://mabubakar.com)
+
+See the [SEO, local search, and AI search audit](SEO_GEO_AUDIT.md) for verified findings and remaining actions.
 
 ## ✨ Features
 
@@ -90,14 +92,7 @@ vercel
 
 ## 📧 Contact
 
-- **Email**: hmabubakar2018@gmail.com
-- **LinkedIn**: [linkedin.com/in/hmabubakar](https://linkedin.com/in/hmabubakar)
-- **GitHub**: [github.com/hmabubakarofficial](https://github.com/hmabubakarofficial)
+- **Email**: abubakaraleem1122@gmail.com
+- **Phone / WhatsApp**: +92 318 8283154
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-Made with ❤️ by Muhammad abubakar
+Made by Muhammad Abubakar

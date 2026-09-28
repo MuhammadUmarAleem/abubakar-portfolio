@@ -4,7 +4,7 @@ import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
-import { siteUrl, socialImageUrl } from '@/lib/seo';
+import { siteUrl, socialImageUrl, serializeJsonLd } from '@/lib/seo';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -24,7 +24,6 @@ export const metadata: Metadata = {
     template: '%s | Muhammad Abubakar',
   },
   description: 'Muhammad Abubakar offers electrical, hybrid, EV, gearbox, and car AC diagnostics and repair, plus remote diagnostic assistance. 12+ years of experience.',
-  keywords: ['Auto Electrician', 'Hybrid Vehicle Specialist', 'Electric Vehicle Repair', 'Gearbox Diagnostics', 'Gearbox Repair', 'Car AC Diagnostics', 'Car AC Repair', 'EV Battery System', 'HEV Diagnostics', 'Car Electrical Repair', 'Muhammad Abubakar', 'Toyota Hybrid', 'Mercedes EV', 'BMW Electric', 'CAN-BUS Repair'],
   authors: [{ name: 'Muhammad Abubakar', url: 'https://mabubakar.com' }],
   creator: 'Muhammad Abubakar',
   publisher: 'Muhammad Abubakar',
@@ -90,6 +89,7 @@ const identitySchema = {
       telephone: '+92 318 8283154',
       email: 'abubakaraleem1122@gmail.com',
       knowsAbout: ['Hybrid vehicle diagnostics', 'Electric vehicle diagnostics', 'Gearbox diagnostics', 'Car AC diagnostics', 'Auto electrical repair'],
+      knowsLanguage: ['en', 'ur', 'pa'],
     },
     {
       '@type': 'WebSite',
@@ -97,6 +97,7 @@ const identitySchema = {
       name: 'Muhammad Abubakar',
       url: `${siteUrl}/`,
       publisher: { '@id': `${siteUrl}/#person` },
+      inLanguage: 'en',
     },
   ],
 };
@@ -109,11 +110,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(identitySchema) }} />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(identitySchema) }} />
         <meta name="theme-color" content="#FF6B6B" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

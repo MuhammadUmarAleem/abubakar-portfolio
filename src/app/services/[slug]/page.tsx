@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowRight, CheckCircle2, MessageCircle, Phone } from 'lucide-react';
 import { serviceGuides, serviceGuideSlugs } from '@/lib/service-guides';
-import { pageMetadata, siteUrl } from '@/lib/seo';
+import { pageMetadata, serializeJsonLd, siteUrl } from '@/lib/seo';
 
 type Props = { params: { slug: string } };
 
@@ -28,19 +28,45 @@ export default function ServiceGuidePage({ params }: Props) {
   if (!guide) notFound();
 
   const url = `${siteUrl}/services/${guide.slug}`;
-  const serviceSchema = {
+  const pageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: guide.title,
-    description: guide.description,
-    url,
-    provider: { '@id': `${siteUrl}/#person` },
-    serviceType: guide.title,
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `${url}#webpage`,
+        url,
+        name: guide.title,
+        description: guide.description,
+        inLanguage: 'en',
+        isPartOf: { '@id': `${siteUrl}/#website` },
+        author: { '@id': `${siteUrl}/#person` },
+        breadcrumb: { '@id': `${url}#breadcrumb` },
+        mainEntity: { '@id': `${url}#service` },
+      },
+      {
+        '@type': 'Service',
+        '@id': `${url}#service`,
+        name: guide.title,
+        description: guide.description,
+        url,
+        provider: { '@id': `${siteUrl}/#person` },
+        serviceType: guide.title,
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${url}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: `${siteUrl}/services` },
+          { '@type': 'ListItem', position: 3, name: guide.title, item: url },
+        ],
+      },
+    ],
   };
 
   return (
     <div className="pt-28 pb-20">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(pageSchema) }} />
       <div className="container mx-auto px-4 md:px-6 max-w-5xl">
         <nav aria-label="Breadcrumb" className="text-sm text-dark-500 dark:text-dark-400 mb-10">
           <Link href="/" className="hover:text-primary-500">Home</Link>
@@ -54,6 +80,9 @@ export default function ServiceGuidePage({ params }: Props) {
           <p className="text-primary-600 dark:text-primary-400 font-semibold mb-3">Vehicle diagnostic service</p>
           <h1 className="text-4xl md:text-5xl font-bold text-dark-900 dark:text-white mb-6">{guide.title}</h1>
           <p className="text-lg text-dark-600 dark:text-dark-300 leading-relaxed">{guide.intro}</p>
+          <p className="mt-5 text-sm text-dark-500 dark:text-dark-400">
+            Guide by <Link href="/about" className="font-semibold text-primary-600 dark:text-primary-400 hover:underline">Muhammad Abubakar</Link>, automotive diagnostics specialist.
+          </p>
         </header>
 
         <section aria-label="Quick answer" className="glass-card p-6 md:p-8 mb-14 border-l-4 border-primary-500">

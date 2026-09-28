@@ -194,7 +194,7 @@ export default function ServicesPage() {
               Professional Services
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              My <span className="gradient-text">Services</span>
+              Vehicle <span className="gradient-text">Diagnostics &amp; Repair Services</span>
             </h1>
             <p className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-2xl mx-auto">
               Electrical, hybrid, EV, gearbox, and car AC diagnostics and repair for traditional and electric vehicles.
@@ -220,7 +220,7 @@ export default function ServicesPage() {
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-dark-900 dark:text-white mb-3">{service.title}</h3>
+                <h2 className="text-xl font-bold text-dark-900 dark:text-white mb-3">{service.title}</h2>
                 <p className="text-dark-500 dark:text-dark-400 text-sm mb-4">{service.description}</p>
                 
                 <ul className="space-y-2">

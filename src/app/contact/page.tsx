@@ -98,7 +98,7 @@ export default function ContactPage() {
               Get In Touch
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Contact <span className="gradient-text">Me</span>
+              Contact <span className="gradient-text">Muhammad Abubakar</span>
             </h1>
             <p className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-2xl mx-auto">
               Ask about electrical, hybrid, EV, gearbox, or car AC diagnostics and repair, including remote assistance.

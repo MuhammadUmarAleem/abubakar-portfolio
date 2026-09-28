@@ -185,7 +185,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-dark-200 dark:border-dark-800">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <p className="text-dark-500 dark:text-dark-400 text-sm text-center md:text-center">
-              © {currentYear} Muhamamd Abubakar. All rights reserved.
+              © {currentYear} Muhammad Abubakar. All rights reserved.
             </p>
             {/* <p className="text-dark-500 dark:text-dark-400 text-sm flex items-center gap-1">
               Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> for Excellence

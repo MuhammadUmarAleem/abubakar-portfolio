@@ -255,6 +255,9 @@ export default function Home() {
                 <span className="gradient-text">Muhammad</span>
                 <br />
                 <span className="text-dark-900 dark:text-white">Abubakar</span>
+                <span className="block mt-4 text-xl md:text-2xl font-semibold text-dark-600 dark:text-dark-300">
+                  Automotive Diagnostics &amp; Repair Specialist
+                </span>
               </motion.h1>
 
               <motion.div
@@ -262,6 +265,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
                 className="text-xl md:text-2xl lg:text-3xl font-semibold text-dark-600 dark:text-dark-300 mb-6 h-10"
+                aria-hidden="true"
               >
                 <TypeAnimation
                   sequence={[

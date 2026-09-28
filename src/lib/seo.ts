@@ -3,6 +3,11 @@ import type { Metadata } from 'next';
 export const siteUrl = 'https://mabubakar.com';
 export const socialImageUrl = `${siteUrl}/opengraph-image`;
 
+// Keep JSON-LD safe when it is written into an HTML script element.
+export function serializeJsonLd(value: unknown): string {
+  return JSON.stringify(value).replace(/</g, '\\u003c');
+}
+
 type PageSeo = {
   title: string;
   description: string;

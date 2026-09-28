@@ -160,8 +160,7 @@ export default function AboutPage() {
               </span>
               
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                From <span className="gradient-text">Traditional</span> to{' '}
-                <span className="gradient-text">Electric</span>
+                About <span className="gradient-text">Muhammad Abubakar</span>
               </h1>
               
               <div className="space-y-4 text-dark-600 dark:text-dark-300 text-lg">
