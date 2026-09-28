@@ -55,7 +55,7 @@ const experiences = [
     title: 'Auto Electrician',
     company: 'AR Akhtar Ali Workshop',
     companyUrl: '#',
-    period: 'October 2023 - Present',
+    period: '2019 - Present',
     type: 'Full-time',
     description: 'Hybrid and EV diagnostics and repair, plus gearbox fault diagnosis and AC system work.',
     achievements: [
@@ -72,7 +72,7 @@ const experiences = [
     title: 'Auto Electrician',
     company: 'Allah Hoo Autos',
     companyUrl: '#',
-    period: 'Early 2014 - September 2023',
+    period: '2014 - 2019',
     type: 'Full-time',
     description: 'Hybrid vehicle diagnostics, battery reconditioning, and car AC system repair.',
     achievements: [

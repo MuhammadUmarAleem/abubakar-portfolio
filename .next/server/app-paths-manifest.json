@@ -1,9 +1,8 @@
 {
   "/skills/page": "app/skills/page.js",
-  "/specializations/page": "app/specializations/page.js",
   "/services/page": "app/services/page.js",
+  "/specializations/page": "app/specializations/page.js",
   "/contact/page": "app/contact/page.js",
   "/page": "app/page.js",
-  "/experience/page": "app/experience/page.js",
-  "/_not-found/page": "app/_not-found/page.js"
+  "/experience/page": "app/experience/page.js"
 }

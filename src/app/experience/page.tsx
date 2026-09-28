@@ -24,7 +24,7 @@ const experience = [
   {
     role: 'Auto Electrician',
     company: 'AR Akhtar Ali Workshop',
-    period: 'October 2023 - Present',
+    period: '2019 - Present',
     type: 'Full-time',
     specialty: 'Hybrid, EV, Gearbox & AC Diagnostics',
     current: true,
@@ -43,7 +43,7 @@ const experience = [
   {
     role: 'Auto Electrician',
     company: 'Allah Hoo Autos',
-    period: 'Early 2014 - September 2023',
+    period: '2014 - 2019',
     type: 'Full-time',
     specialty: 'Hybrid Vehicles Specialist',
     current: false,
