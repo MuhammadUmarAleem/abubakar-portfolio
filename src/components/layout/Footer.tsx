@@ -7,8 +7,7 @@ import {
   Mail, 
   Heart,
   MessageCircle,
-  Phone,
-  MapPin
+  Phone
 } from 'lucide-react';
 
 const footerLinks = {
@@ -28,7 +27,7 @@ const footerLinks = {
     { name: 'Traditional Car Electrical', href: '/services' },
     { name: 'Scanner Diagnostics', href: '/services' },
     { name: 'Gearbox Diagnostics & Repair', href: '/services' },
-    { name: 'AC & Cooling Service', href: '/services' },
+    { name: 'Car AC Diagnostics & Repair', href: '/services' },
   ],
   brands: ['Toyota', 'Lexus', 'Mercedes-Benz', 'BMW', 'Audi', 'Porsche', 'BYD', 'Kia', 'Nissan', 'Ford', 'MG', 'Hyundai', 'Honda'],
 };
@@ -52,7 +51,7 @@ export default function Footer() {
               <span className="text-xl font-bold gradient-text">Muhammad Abubakar</span>
             </Link>
             <p className="text-dark-500 dark:text-dark-400 text-sm mb-4">
-              Automotive electrical, hybrid, EV, and gearbox diagnostics and repair in Lahore, with remote diagnostic assistance.
+              Electrical, hybrid, EV, gearbox, and car AC diagnostics and repair, with remote diagnostic assistance.
             </p>
             <div className="flex gap-3">
               <motion.a
@@ -153,12 +152,6 @@ export default function Footer() {
                   <Mail className="w-4 h-4" />
                   abubakaraleem1122@gmail.com
                 </a>
-              </li>
-              <li>
-                <div className="flex items-start gap-2 text-dark-500 dark:text-dark-400 text-sm">
-                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                  <span>A.R Akhtar Ali Autos Near Netsol Technologies, Lahore, Pakistan</span>
-                </div>
               </li>
             </ul>
             <div className="mt-4">

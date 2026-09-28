@@ -55,7 +55,6 @@ const projects = [
       'Network diagnostics'
     ],
     color: 'from-purple-500 to-pink-500',
-    featured: true,
     category: 'Electrical Systems',
   },
   {
@@ -85,16 +84,17 @@ const projects = [
     category: 'Safety Systems',
   },
   {
-    title: 'Car AC & Cooling Systems',
-    description: 'Complete car AC service including gas refilling, compressor checks, leakage testing, and hybrid/EV cooling system maintenance.',
-    tags: ['AC Repair', 'Gas Refilling', 'Compressor Service', 'Cooling Systems'],
+    title: 'Car AC Diagnostics & Repair',
+    description: 'Car AC fault diagnosis, leak testing, compressor checks, and repair, including hybrid/EV cooling system maintenance.',
+    tags: ['AC Diagnostics', 'AC Repair', 'Leak Testing', 'Cooling Systems'],
     highlights: [
-      'Gas refilling & leak detection',
+      'AC fault diagnosis & leak testing',
       'Compressor diagnostics',
       'EV thermal management',
       'Climate control repair'
     ],
     color: 'from-cyan-500 to-blue-500',
+    featured: true,
     category: 'Climate Systems',
   },
   {
@@ -129,6 +129,7 @@ const projects = [
     tags: ['Gearbox Diagnostics', 'Transmission Controls', 'Wiring Checks'],
     highlights: ['Gearbox fault code reading', 'Shift and selector checks', 'Transmission wiring diagnosis', 'Repair assessment'],
     color: 'from-slate-500 to-blue-500',
+    featured: true,
     category: 'Gearbox Systems',
   },
 ];
@@ -164,7 +165,7 @@ export default function ProjectsPage() {
               Service <span className="gradient-text">Specializations</span>
             </h1>
             <p className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-2xl mx-auto">
-              A showcase of my expertise across traditional cars, hybrid vehicles, and fully electric vehicles.
+              Service expertise across hybrid and electric vehicles, gearbox diagnostics and repair, and car AC diagnostics and repair.
             </p>
           </motion.div>
         </div>
@@ -206,7 +207,7 @@ export default function ProjectsPage() {
             </h2>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {projects.filter(p => p.featured).map((project, index) => (
               <motion.div
                 key={project.title}
@@ -339,7 +340,7 @@ export default function ProjectsPage() {
               Need Professional Service?
             </h2>
             <p className="text-dark-500 dark:text-dark-400 mb-6 max-w-xl mx-auto">
-              Whether it&apos;s a traditional car, hybrid, or fully electric vehicle—I provide expert diagnostics and repair services.
+              I provide hybrid and EV service, gearbox diagnostics and repair, car AC diagnostics and repair, and auto electrical work.
             </p>
             <Link href="/contact" className="btn-primary">
               Contact Me

@@ -5,7 +5,6 @@ import { useState } from 'react';
 import {
   Mail,
   MessageCircle,
-  MapPin,
   Clock,
   Send,
   Phone,
@@ -35,15 +34,9 @@ const contactInfo = [
     href: 'mailto:abubakaraleem1122@gmail.com',
   },
   {
-    icon: MapPin,
-    title: 'Location',
-    value: 'A.R Akhtar Ali Autos Near Netsol Technologies, Lahore, Pakistan',
-    href: null,
-  },
-  {
     icon: Clock,
     title: 'Working Hours',
-    value: 'Mon-Sat, 9AM-8PM PKT',
+    value: 'Mon-Sat, 9AM-8PM',
     href: null,
   },
 ];
@@ -56,7 +49,7 @@ const services = [
   'Gearbox Diagnostics & Repair',
   'Remote Diagnostic Assistance',
   'CAN-BUS Repair',
-  'AC & Cooling Service',
+  'Car AC Diagnostics & Repair',
   'Sound & Security Installation',
   'Other',
 ];
@@ -117,7 +110,7 @@ export default function ContactPage() {
               Contact <span className="gradient-text">Me</span>
             </h1>
             <p className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-2xl mx-auto">
-              Need electrical or gearbox help? Visit me in Lahore or ask about remote diagnostic assistance.
+              Ask about electrical, hybrid, EV, gearbox, or car AC diagnostics and repair, including remote assistance.
             </p>
           </motion.div>
         </div>
@@ -374,7 +367,7 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   {[
                     { icon: '⚡', text: '12+ Years of Experience' },
-                    { icon: '🔧', text: 'Electrical, Gearbox, HEV & EV Work' },
+                    { icon: '🔧', text: 'Electrical, Gearbox, Car AC, HEV & EV Work' },
                     { icon: '🔋', text: 'Battery System Specialist' },
                     { icon: '📊', text: 'Professional Diagnostics' },
                     { icon: '✅', text: 'Quality Guaranteed' },
@@ -388,9 +381,9 @@ export default function ContactPage() {
               </div>
 
               <div className="glass-card p-8">
-                <h2 className="text-2xl font-bold text-dark-900 dark:text-white mb-4">Regional & Remote Support</h2>
+                <h2 className="text-2xl font-bold text-dark-900 dark:text-white mb-4">Remote Diagnostic Support</h2>
                 <p className="text-dark-600 dark:text-dark-300 mb-4">
-                  Hands-on diagnostics and repair are available in Lahore. I also offer remote diagnostic assistance to drivers and workshops across Pakistan and other regions.
+                  Hands-on diagnostics and repair are available by appointment. I also offer remote diagnostic assistance to drivers and workshops.
                 </p>
                 <p className="text-dark-500 dark:text-dark-400 text-sm">
                   Send your vehicle model, symptoms, fault codes, and scan results by WhatsApp to discuss the next steps.
@@ -437,28 +430,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Location Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4 md:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.3 }}
-            className="glass-card p-8 text-center"
-          >
-            <MapPin className="w-12 h-12 text-primary-500 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-dark-900 dark:text-white mb-4">
-              Service Location
-            </h2>
-            <p className="text-dark-500 dark:text-dark-400 text-lg max-w-2xl mx-auto">
-              A.R Akhtar Ali Autos Near Netsol Technologies, Lahore, Pakistan
-            </p>
-            {/* <p className="text-dark-400 dark:text-dark-500 mt-2">
-              Also available for on-site service in Lahore and surrounding areas
-            </p> */}
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 }

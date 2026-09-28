@@ -50,6 +50,19 @@ const skillCategories = [
     ],
   },
   {
+    id: 'gearbox',
+    name: 'Gearbox Diagnostics & Repair',
+    icon: Wrench,
+    color: 'from-slate-500 to-blue-500',
+    skills: [
+      { name: 'Gearbox Fault Diagnosis', level: null },
+      { name: 'Shift & Selector Fault Checks', level: null },
+      { name: 'Transmission Wiring Diagnosis', level: null },
+      { name: 'Control-System Testing', level: null },
+      { name: 'Repair Assessment', level: null },
+    ],
+  },
+  {
     id: 'can-bus',
     name: 'CAN-BUS & Communication',
     icon: CircuitBoard,
@@ -94,10 +107,11 @@ const skillCategories = [
   },
   {
     id: 'ac',
-    name: 'AC & Cooling Systems',
+    name: 'Car AC Diagnostics & Repair',
     icon: Thermometer,
     color: 'from-cyan-500 to-blue-500',
     skills: [
+      { name: 'AC Fault Diagnosis', level: 95 },
       { name: 'AC System Repair', level: 95 },
       { name: 'Gas Refilling', level: 95 },
       { name: 'Compressor Checks', level: 90 },
@@ -116,6 +130,7 @@ const coreCompetencies = [
   { icon: Settings, text: 'ECU & Module Programming' },
   { icon: Car, text: 'Complete Auto Electrical Service' },
   { icon: Wrench, text: 'Gearbox Diagnostics & Repair' },
+  { icon: Thermometer, text: 'Car AC Diagnostics & Repair' },
   { icon: Shield, text: '12+ Years Professional Experience' },
 ];
 
@@ -144,7 +159,7 @@ export default function SkillsPage() {
               My <span className="gradient-text">Skills</span>
             </h1>
             <p className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-2xl mx-auto">
-              Automotive electrical and gearbox expertise for traditional, hybrid, and electric vehicles.
+              Automotive electrical, hybrid, EV, gearbox, and car AC diagnostics and repair skills.
             </p>
           </motion.div>
         </div>
@@ -233,16 +248,18 @@ export default function SkillsPage() {
                     >
                       <div className="flex justify-between mb-2">
                         <span className="font-medium text-dark-700 dark:text-dark-300">{skill.name}</span>
-                        <span className="text-primary-600 dark:text-primary-400 font-semibold">{skill.level}%</span>
+                        {skill.level !== null && <span className="text-primary-600 dark:text-primary-400 font-semibold">{skill.level}%</span>}
                       </div>
-                      <div className="h-2 bg-dark-100 dark:bg-dark-800 rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={{ width: `${skill.level}%` }}
-                          transition={{ duration: 0.8, delay: index * 0.05 }}
-                          className={`h-full rounded-full bg-gradient-to-r ${activeSkills.color}`}
-                        />
-                      </div>
+                      {skill.level !== null && (
+                        <div className="h-2 bg-dark-100 dark:bg-dark-800 rounded-full overflow-hidden">
+                          <motion.div
+                            initial={{ width: 0 }}
+                            animate={{ width: `${skill.level}%` }}
+                            transition={{ duration: 0.8, delay: index * 0.05 }}
+                            className={`h-full rounded-full bg-gradient-to-r ${activeSkills.color}`}
+                          />
+                        </div>
+                      )}
                     </motion.div>
                   ))}
                 </div>

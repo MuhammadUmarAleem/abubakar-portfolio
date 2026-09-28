@@ -100,12 +100,12 @@ const services = [
   },
   {
     icon: Thermometer,
-    title: 'AC & Cooling Systems',
-    description: 'Car AC service including gas refilling, compressor checks, and EV/hybrid cooling system maintenance.',
+    title: 'Car AC Diagnostics & Repair',
+    description: 'AC fault diagnosis and repair, including leak testing, compressor checks, and hybrid/EV cooling system maintenance.',
     features: [
-      'Gas Refilling',
-      'Leak Detection',
-      'Compressor Service',
+      'AC Fault Diagnosis',
+      'Leak Testing',
+      'Compressor Checks & Repair',
       'EV Thermal Management',
       'Climate Control Repair',
     ],
@@ -190,7 +190,7 @@ export default function ServicesPage() {
               My <span className="gradient-text">Services</span>
             </h1>
             <p className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-2xl mx-auto">
-              Automotive electrical, gearbox, hybrid, and EV diagnostics and repair for traditional cars and electric vehicles.
+              Electrical, hybrid, EV, gearbox, and car AC diagnostics and repair for traditional and electric vehicles.
             </p>
           </motion.div>
         </div>
@@ -332,7 +332,7 @@ export default function ServicesPage() {
                 <div className="space-y-4">
                   {[
                     { icon: '⚡', text: '12+ Years of Experience' },
-                    { icon: '🔧', text: 'Electrical, Gearbox, Hybrid & EV Work' },
+                    { icon: '🔧', text: 'Electrical, Gearbox, Car AC, Hybrid & EV Work' },
                     { icon: '🔋', text: 'Specialized in Battery Systems' },
                     { icon: '📊', text: 'Professional Scanner Diagnostics' },
                     { icon: '✅', text: 'Quality Workmanship Guaranteed' },
@@ -357,19 +357,19 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Regional Support */}
+      {/* Remote Support */}
       <section className="py-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="glass-card p-8 md:p-12 grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-white mb-4">
-                Regional & <span className="gradient-text">Remote Support</span>
+                <span className="gradient-text">Remote Diagnostic Support</span>
               </h2>
               <p className="text-dark-600 dark:text-dark-300 mb-4">
-                Visit me in Lahore for hands-on diagnostics and repair. I also provide remote diagnostic assistance for drivers and workshops across Pakistan and other regions.
+                Hands-on diagnostics and repair are available by appointment. I also provide remote diagnostic assistance for drivers and workshops.
               </p>
               <p className="text-dark-500 dark:text-dark-400">
-                Share the vehicle model, symptoms, fault codes, and any scan results by WhatsApp. I can help review the information and advise on the next diagnostic steps. On-site work depends on your location and the vehicle issue.
+                Share the vehicle model, symptoms, fault codes, and any scan results by WhatsApp. I can review the information and advise on the next diagnostic steps.
               </p>
             </div>
             <div className="flex flex-wrap md:justify-center gap-4">
@@ -395,7 +395,7 @@ export default function ServicesPage() {
               Ready to Get Your Vehicle Serviced?
             </h2>
             <p className="text-dark-500 dark:text-dark-400 mb-6 max-w-xl mx-auto">
-              Contact me today for professional automotive electrical service. I&apos;m available for all types of vehicles.
+              Contact me for electrical, hybrid, EV, gearbox, or car AC diagnostics and repair.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="tel:+923188283154" className="btn-primary">

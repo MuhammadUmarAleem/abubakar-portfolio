@@ -6,7 +6,6 @@ import {
   Building2,
   Calendar,
   CheckCircle2,
-  MapPin,
   Wrench,
   Sparkles,
   ArrowRight,
@@ -16,7 +15,8 @@ import {
   Gauge,
   CircuitBoard,
   Award,
-  Target
+  Target,
+  Thermometer
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -24,12 +24,11 @@ const experience = [
   {
     role: 'Auto Electrician',
     company: 'AR Akhtar Ali Workshop',
-    location: 'Lahore, Pakistan',
     period: 'October 2023 - Present',
     type: 'Full-time',
-    specialty: 'Hybrid & Electric Cars Specialist',
+    specialty: 'Hybrid, EV, Gearbox & AC Diagnostics',
     current: true,
-    description: 'Performing advanced diagnostics and repair on hybrid (HEV) and fully electric vehicles (EV), alongside gearbox fault diagnosis and repair assessment.',
+    description: 'Diagnosing and repairing hybrid and EV systems, gearbox faults, and car AC and cooling issues.',
     highlights: [
       'Performed advanced diagnostics and repair on hybrid (HEV) and fully electric vehicles (EV)',
       'Worked on EV battery systems, electric motors, inverters, converters, and charging systems',
@@ -37,13 +36,13 @@ const experience = [
       'Installed EV accessories, DC-DC converters, dash cams, trackers, and upgraded systems',
       'Conducted preventive maintenance for EV cooling systems and wiring inspections',
       'Diagnosed gear shifting, selector, wiring, and transmission control faults',
+      'Diagnosed car AC performance, compressor, leak, and cooling faults',
     ],
-    technologies: ['HEV Repair', 'EV Diagnostics', 'Battery Systems', 'CAN-BUS', 'Scanner Diagnostics', 'High-Voltage Safety'],
+    technologies: ['HEV Repair', 'EV Diagnostics', 'Gearbox Diagnostics', 'Car AC Repair', 'CAN-BUS', 'Scanner Diagnostics'],
   },
   {
     role: 'Auto Electrician',
     company: 'Allah Hoo Autos',
-    location: 'Toba Tek Singh, Pakistan',
     period: 'March 2022 - September 2023',
     type: 'Full-time',
     specialty: 'Hybrid Vehicles Specialist',
@@ -71,7 +70,8 @@ const specializations = [
   { name: 'Diagnostic Systems', icon: Gauge, expertise: 'Expert', description: 'OBD-II, Techstream, Honda HDS, Autel, Launch' },
   { name: 'Electrical Wiring', icon: CircuitBoard, expertise: 'Expert', description: 'CAN-BUS, short circuit, open circuit repair' },
   { name: 'High-Voltage Systems', icon: Wrench, expertise: 'Advanced', description: 'Safety procedures, inverters, converters' },
-  { name: 'Gearbox & Transmission', icon: Wrench, expertise: 'Experienced', description: 'Gearbox fault diagnosis, control systems, and repair assessment' },
+  { name: 'Gearbox Diagnostics & Repair', icon: Wrench, expertise: 'Experienced', description: 'Gearbox fault diagnosis, control systems, and repair assessment' },
+  { name: 'Car AC Diagnostics & Repair', icon: Thermometer, expertise: 'Experienced', description: 'AC fault finding, leak testing, compressor checks, and repair' },
 ];
 
 const achievements = [
@@ -104,7 +104,7 @@ export default function ExperiencePage() {
               Work <span className="gradient-text">Experience</span>
             </h1>
             <p className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-2xl mx-auto">
-              12+ years of automotive experience across electrical, hybrid, EV, and gearbox work. Selected recent roles are shown below.
+              12+ years of automotive experience across electrical, hybrid, EV, gearbox, and car AC work. Selected recent roles are shown below.
             </p>
           </motion.div>
         </div>
@@ -187,10 +187,6 @@ export default function ExperiencePage() {
                         <span className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
                           {exp.period}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
-                          {exp.location}
                         </span>
                       </div>
 
@@ -316,7 +312,7 @@ export default function ExperiencePage() {
               Need Automotive Electrical Service?
             </h2>
             <p className="text-dark-500 dark:text-dark-400 mb-6 max-w-xl mx-auto">
-              Whether it&apos;s a traditional car, hybrid, or fully electric vehicle—I&apos;m here to help with expert diagnostics and repair.
+              Contact me for hybrid and EV systems, gearbox diagnostics and repair, car AC diagnostics and repair, or electrical work.
             </p>
             <Link href="/contact" className="btn-primary">
               Contact Me
