@@ -140,7 +140,7 @@ const stats = [
   { label: 'Years Experience', value: '12+', icon: Folder },
   { label: 'Vehicles Serviced', value: '3k+', icon: Car },
   { label: 'Vehicle Brands', value: '20+', icon: Star },
-  { label: 'Service Areas', value: '5+', icon: Wrench },
+  { label: 'Service Types', value: '5+', icon: Wrench },
 ];
 
 export default function ProjectsPage() {
@@ -262,7 +262,7 @@ export default function ProjectsPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl font-bold text-dark-900 dark:text-white mb-4">
-              All <span className="gradient-text">Service Areas</span>
+              All <span className="gradient-text">Services</span>
             </h2>
           </motion.div>
 

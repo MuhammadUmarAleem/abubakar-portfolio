@@ -87,12 +87,12 @@ export default async function Image() {
             marginBottom: 24,
           }}
         >
-          Auto Electrical & Gearbox Specialist
+          Hybrid, EV, Gearbox & AC Diagnostics
         </div>
 
         {/* Tags */}
         <div style={{ display: 'flex', gap: 12 }}>
-          {['HEV/EV Specialist', 'Battery Systems', 'Gearbox Work', '12+ Years Experience'].map((tag) => (
+          {['Hybrid & EV', 'Gearbox Repair', 'Car AC Repair', '12+ Years Experience'].map((tag) => (
             <div
               key={tag}
               style={{
@@ -120,7 +120,6 @@ export default async function Image() {
         >
           <span>📞 +92 318 8283154</span>
           <span>📧 abubakaraleem1122@gmail.com</span>
-          <span>📍 Vehari, Pakistan</span>
         </div>
       </div>
     ),

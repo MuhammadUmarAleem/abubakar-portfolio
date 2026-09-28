@@ -111,7 +111,7 @@ const skillCategories = [
     icon: Thermometer,
     color: 'from-cyan-500 to-blue-500',
     skills: [
-      { name: 'AC Fault Diagnosis', level: 95 },
+      { name: 'AC Fault Diagnosis', level: null },
       { name: 'AC System Repair', level: 95 },
       { name: 'Gas Refilling', level: 95 },
       { name: 'Compressor Checks', level: 90 },

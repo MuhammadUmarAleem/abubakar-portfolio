@@ -140,8 +140,8 @@ export default function AboutPage() {
                       <Wrench className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="font-bold text-dark-900 dark:text-white">Electrical & Gearbox Specialist</p>
-                      <p className="text-sm text-dark-500 dark:text-dark-400">HEV & EV Specialist</p>
+                      <p className="font-bold text-dark-900 dark:text-white">Vehicle Diagnostics & Repair</p>
+                      <p className="text-sm text-dark-500 dark:text-dark-400">Hybrid • EV • Gearbox • AC</p>
                     </div>
                   </div>
                 </motion.div>

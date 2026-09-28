@@ -43,7 +43,7 @@ const experience = [
   {
     role: 'Auto Electrician',
     company: 'Allah Hoo Autos',
-    period: 'March 2022 - September 2023',
+    period: 'Early 2014 - September 2023',
     type: 'Full-time',
     specialty: 'Hybrid Vehicles Specialist',
     current: false,
@@ -78,7 +78,7 @@ const achievements = [
   { icon: Wrench, value: '12+', label: 'Years Experience' },
   { icon: Car, value: '3k+', label: 'Vehicles Serviced' },
   { icon: Target, value: '20+', label: 'Vehicle Brands' },
-  { icon: Award, value: '5+', label: 'Service Areas' },
+  { icon: Award, value: '5+', label: 'Service Types' },
 ];
 
 const brands = ['Toyota', 'Lexus', 'Mercedes-Benz', 'BMW', 'Audi', 'Porsche', 'BYD', 'Kia', 'Nissan', 'Ford', 'MG', 'Hyundai', 'Honda'];
@@ -104,7 +104,7 @@ export default function ExperiencePage() {
               Work <span className="gradient-text">Experience</span>
             </h1>
             <p className="text-dark-500 dark:text-dark-400 text-lg md:text-xl max-w-2xl mx-auto">
-              12+ years of automotive experience across electrical, hybrid, EV, gearbox, and car AC work. Selected recent roles are shown below.
+              12+ years of automotive experience across electrical, hybrid, EV, gearbox, and car AC work. The timeline below shows that work history.
             </p>
           </motion.div>
         </div>

@@ -19,11 +19,11 @@ const firaCode = Fira_Code({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Muhammad Abubakar | Auto Electrician & Gearbox Specialist',
+    default: 'Muhammad Abubakar | Hybrid, EV, Gearbox & AC Diagnostics',
     template: '%s | Muhammad Abubakar',
   },
-  description: 'Muhammad Abubakar offers auto electrical, hybrid, EV, and gearbox diagnostics and repair in Lahore, with remote diagnostic assistance. 12+ years of experience.',
-  keywords: ['Auto Electrician', 'Hybrid Vehicle Specialist', 'Electric Vehicle Repair', 'Gearbox Diagnostics', 'EV Battery System', 'HEV Diagnostics', 'Car Electrical Repair', 'Muhammad Abubakar', 'Lahore Pakistan', 'Toyota Hybrid', 'Mercedes EV', 'BMW Electric', 'CAN-BUS Repair'],
+  description: 'Muhammad Abubakar offers electrical, hybrid, EV, gearbox, and car AC diagnostics and repair, plus remote diagnostic assistance. 12+ years of experience.',
+  keywords: ['Auto Electrician', 'Hybrid Vehicle Specialist', 'Electric Vehicle Repair', 'Gearbox Diagnostics', 'Gearbox Repair', 'Car AC Diagnostics', 'Car AC Repair', 'EV Battery System', 'HEV Diagnostics', 'Car Electrical Repair', 'Muhammad Abubakar', 'Toyota Hybrid', 'Mercedes EV', 'BMW Electric', 'CAN-BUS Repair'],
   authors: [{ name: 'Muhammad Abubakar', url: 'https://mabubakar.com' }],
   creator: 'Muhammad Abubakar',
   publisher: 'Muhammad Abubakar',
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Muhammad Abubakar | Auto Electrician & Gearbox Specialist',
-    description: 'Auto electrical, hybrid, EV, and gearbox diagnostics and repair in Lahore. 12+ years of experience and remote diagnostic assistance.',
+    title: 'Muhammad Abubakar | Hybrid, EV, Gearbox & AC Diagnostics',
+    description: 'Electrical, hybrid, EV, gearbox, and car AC diagnostics and repair. 12+ years of experience and remote diagnostic assistance.',
     url: 'https://mabubakar.com',
     siteName: 'Muhammad Abubakar - Auto Electrician Portfolio',
     images: [
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Muhammad Abubakar | Auto Electrician',
-    description: 'Auto electrical, hybrid, EV, and gearbox diagnostics and repair in Lahore. Remote diagnostic assistance available.',
+    title: 'Muhammad Abubakar | Vehicle Diagnostics & Repair',
+    description: 'Electrical, hybrid, EV, gearbox, and car AC diagnostics and repair. Remote diagnostic assistance available.',
     images: ['/og-image.png'],
     creator: '@mabubakar',
   },

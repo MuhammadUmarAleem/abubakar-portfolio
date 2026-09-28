@@ -39,7 +39,7 @@ const stats = [
   { label: 'Years Experience', value: '12+', icon: Briefcase },
   { label: 'Vehicles Serviced', value: '3k+', icon: Car },
   { label: 'Vehicle Brands', value: '20+', icon: Target },
-  { label: 'Service Areas', value: '5+', icon: Wrench },
+  { label: 'Service Types', value: '5+', icon: Wrench },
 ];
 
 // Social links
@@ -72,7 +72,7 @@ const experiences = [
     title: 'Auto Electrician',
     company: 'Allah Hoo Autos',
     companyUrl: '#',
-    period: 'March 2022 - September 2023',
+    period: 'Early 2014 - September 2023',
     type: 'Full-time',
     description: 'Hybrid vehicle diagnostics, battery reconditioning, and car AC system repair.',
     achievements: [
@@ -431,7 +431,7 @@ export default function Home() {
               className="glass-card p-8"
             >
               <p className="text-dark-600 dark:text-dark-300 text-lg leading-relaxed mb-6">
-                I&apos;m an <strong className="text-primary-600 dark:text-primary-400">automotive electrical and gearbox specialist</strong> with 12+ years of hands-on experience.
+                I&apos;m an <strong className="text-primary-600 dark:text-primary-400">automotive diagnostics and repair specialist</strong> with 12+ years of hands-on experience.
               </p>
               <p className="text-dark-600 dark:text-dark-300 text-lg leading-relaxed mb-6">
                 I specialize in <strong className="text-primary-600 dark:text-primary-400">electrical diagnostics</strong>, <strong className="text-primary-600 dark:text-primary-400">gearbox diagnostics and repair</strong>, and <strong className="text-primary-600 dark:text-primary-400">car AC diagnostics and repair</strong> for traditional, hybrid, and electric vehicles.
@@ -496,7 +496,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-white mb-4">
               Work <span className="gradient-text">History</span>
             </h2>
-            <p className="text-dark-500 dark:text-dark-400">Selected recent roles from 12+ years of hands-on work.</p>
+            <p className="text-dark-500 dark:text-dark-400">Work history spanning 12+ years of hands-on automotive service.</p>
           </motion.div>
 
           <div className="max-w-4xl mx-auto space-y-8">
@@ -689,7 +689,7 @@ export default function Home() {
             viewport={{ once: false, amount: 0.3 }}
             className="text-center mt-8"
           >
-            <Link href="/projects" className="btn-secondary">
+            <Link href="/specializations" className="btn-secondary">
               View All Work <ChevronRight className="w-4 h-4" />
             </Link>
           </motion.div>
