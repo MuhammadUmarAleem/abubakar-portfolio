@@ -168,6 +168,13 @@ const process = [
 
 const brands = ['Toyota', 'Lexus', 'Mercedes-Benz', 'BMW', 'Audi', 'Porsche', 'BYD', 'Kia', 'Nissan', 'Ford', 'MG', 'Hyundai', 'Honda'];
 
+const guideLinks: Record<string, string> = {
+  'EV Battery Service': '/services/ev-diagnostics',
+  'Hybrid System Diagnostics': '/services/hybrid-battery-repair',
+  'Gearbox Diagnostics & Repair': '/services/gearbox-diagnostics',
+  'Car AC Diagnostics & Repair': '/services/car-ac-diagnostics',
+};
+
 export default function ServicesPage() {
   return (
     <div className="pt-24 pb-20">
@@ -224,6 +231,11 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
+                {guideLinks[service.title] && (
+                  <Link href={guideLinks[service.title]} className="inline-flex items-center gap-2 mt-5 font-semibold text-primary-600 dark:text-primary-400 hover:underline">
+                    Learn about diagnosis <ArrowRight className="w-4 h-4" />
+                  </Link>
+                )}
               </motion.div>
             ))}
           </div>

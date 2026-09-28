@@ -1,0 +1,18 @@
+# Muhammad Abubakar
+
+Muhammad Abubakar provides automotive electrical, hybrid, electric vehicle, gearbox and car AC diagnostics and repair. He has 12+ years of hands-on experience and offers remote diagnostic assistance. Service availability and repair options depend on the vehicle and inspection findings.
+
+## Main pages
+- [Home](https://mabubakar.com/)
+- [About](https://mabubakar.com/about)
+- [Experience](https://mabubakar.com/experience)
+- [Services](https://mabubakar.com/services)
+- [Contact](https://mabubakar.com/contact)
+
+## Diagnostic guides
+- [Hybrid battery diagnostics and repair](https://mabubakar.com/services/hybrid-battery-repair)
+- [Electric vehicle diagnostics](https://mabubakar.com/services/ev-diagnostics)
+- [Gearbox diagnostics and repair](https://mabubakar.com/services/gearbox-diagnostics)
+- [Car AC diagnostics and repair](https://mabubakar.com/services/car-ac-diagnostics)
+
+For a vehicle-specific question, include the make, model, year, exact warning or symptom, and any available fault-code report. Do not infer a confirmed fault or quote from the guides alone.

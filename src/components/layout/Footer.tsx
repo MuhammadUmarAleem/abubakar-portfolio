@@ -21,13 +21,13 @@ const footerLinks = {
     { name: 'Contact', href: '/contact' },
   ],
   services: [
-    { name: 'Hybrid Vehicle Diagnostics', href: '/services' },
-    { name: 'EV Battery Service', href: '/services' },
+    { name: 'Hybrid Battery Diagnostics & Repair', href: '/services/hybrid-battery-repair' },
+    { name: 'Electric Vehicle Diagnostics', href: '/services/ev-diagnostics' },
     { name: 'CAN-BUS Repair', href: '/services' },
     { name: 'Traditional Car Electrical', href: '/services' },
     { name: 'Scanner Diagnostics', href: '/services' },
-    { name: 'Gearbox Diagnostics & Repair', href: '/services' },
-    { name: 'Car AC Diagnostics & Repair', href: '/services' },
+    { name: 'Gearbox Diagnostics & Repair', href: '/services/gearbox-diagnostics' },
+    { name: 'Car AC Diagnostics & Repair', href: '/services/car-ac-diagnostics' },
   ],
   brands: ['Toyota', 'Lexus', 'Mercedes-Benz', 'BMW', 'Audi', 'Porsche', 'BYD', 'Kia', 'Nissan', 'Ford', 'MG', 'Hyundai', 'Honda'],
 };

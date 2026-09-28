@@ -9,7 +9,6 @@ import {
   Send,
   Phone,
   Sparkles,
-  CheckCircle2,
   Car,
   ArrowRight
 } from 'lucide-react';
@@ -66,27 +65,19 @@ export default function ContactPage() {
     service: '',
     message: '',
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      vehicleBrand: '',
-      vehicleModel: '',
-      service: '',
-      message: '',
-    });
+    const details = [
+      `Name: ${formData.name.trim()}`,
+      `Phone: ${formData.phone.trim()}`,
+      formData.email.trim() && `Email: ${formData.email.trim()}`,
+      formData.vehicleBrand && `Vehicle brand: ${formData.vehicleBrand}`,
+      formData.vehicleModel.trim() && `Vehicle model: ${formData.vehicleModel.trim()}`,
+      formData.service && `Service: ${formData.service}`,
+      `Issue: ${formData.message.trim()}`,
+    ].filter(Boolean).join('\n');
+
+    window.location.assign(`https://wa.me/923188283154?text=${encodeURIComponent(details)}`);
   };
 
   return (
@@ -203,33 +194,12 @@ export default function ContactPage() {
               className="glass-card p-8"
             >
               <h2 className="text-2xl font-bold text-dark-900 dark:text-white mb-6">
-                Send a Message
+                Prepare a WhatsApp Message
               </h2>
-
-              {isSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12"
-                >
-                  <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle2 className="w-8 h-8 text-green-500" />
-                  </div>
-                  <h3 className="text-xl font-bold text-dark-900 dark:text-white mb-2">
-                    Message Sent!
-                  </h3>
-                  <p className="text-dark-500 dark:text-dark-400 mb-4">
-                    Thank you for reaching out. I&apos;ll get back to you soon.
-                  </p>
-                  <button
-                    onClick={() => setIsSubmitted(false)}
-                    className="btn-secondary"
-                  >
-                    Send Another Message
-                  </button>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+              <p className="text-dark-500 dark:text-dark-400 mb-6">
+                Fill in the details below. WhatsApp will open with your message ready to review and send.
+              </p>
+              <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-dark-700 dark:text-dark-300 mb-2">
@@ -254,7 +224,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-dark-50 dark:bg-dark-800 border border-dark-200 dark:border-dark-700 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 outline-none transition-all"
-                        placeholder="+92 xxx xxxxxxx"
+                        placeholder="Your phone number"
                       />
                     </div>
                   </div>
@@ -334,23 +304,12 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    disabled={isSubmitting}
-                    className="w-full btn-primary justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full btn-primary justify-center"
                   >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5" />
-                        Send Message
-                      </>
-                    )}
+                    <Send className="w-5 h-5" />
+                    Continue to WhatsApp
                   </button>
                 </form>
-              )}
             </motion.div>
 
             {/* Info Side */}

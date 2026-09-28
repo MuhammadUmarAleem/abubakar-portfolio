@@ -1,50 +1,20 @@
 import { MetadataRoute } from 'next';
+import { siteUrl } from '@/lib/seo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://asadsial.vercel.app';
-  
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/skills`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/experience`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/projects`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
+  const paths = [
+    '/',
+    '/about',
+    '/skills',
+    '/experience',
+    '/specializations',
+    '/services',
+    '/services/hybrid-battery-repair',
+    '/services/ev-diagnostics',
+    '/services/gearbox-diagnostics',
+    '/services/car-ac-diagnostics',
+    '/contact',
   ];
+
+  return paths.map((path) => ({ url: path === '/' ? siteUrl : new URL(path, siteUrl).toString() }));
 }

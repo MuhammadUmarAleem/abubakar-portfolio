@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hmabubakar.vercel.app/sitemap.xml
+Sitemap: https://mabubakar.com/sitemap.xml

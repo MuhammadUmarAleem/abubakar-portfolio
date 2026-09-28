@@ -188,6 +188,13 @@ const services = [
   },
 ];
 
+const serviceGuideLinks: Record<string, string> = {
+  'Gearbox Diagnostics & Repair': '/services/gearbox-diagnostics',
+  'Car AC Diagnostics & Repair': '/services/car-ac-diagnostics',
+  'EV Battery Service': '/services/ev-diagnostics',
+  'Hybrid Diagnostics': '/services/hybrid-battery-repair',
+};
+
 export default function Home() {
   const { scrollYProgress } = useScroll();
   const { theme } = useTheme();
@@ -729,6 +736,11 @@ export default function Home() {
                 </div>
                 <h3 className="text-lg font-bold text-dark-900 dark:text-white mb-2">{service.title}</h3>
                 <p className="text-dark-500 dark:text-dark-400 text-sm">{service.description}</p>
+                {serviceGuideLinks[service.title] && (
+                  <Link href={serviceGuideLinks[service.title]} className="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:underline">
+                    Learn more <ArrowRight className="w-4 h-4" />
+                  </Link>
+                )}
               </motion.div>
             ))}
           </div>
